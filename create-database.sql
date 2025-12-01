@@ -1,0 +1,3 @@
+CREATE DATABASE players;
+CREATE USER darko with password '12345';
+GRANT ALL PRIVILEGES ON DATABASE players TO darko;
