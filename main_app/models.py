@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 
@@ -25,6 +26,7 @@ class Player(models.Model):
     age = models.IntegerField()
 
     team = models.ForeignKey(Team, on_delete=models.CASCADE, related_name='players')
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
 
    
     coaches = models.ManyToManyField(Coach, blank=True)
